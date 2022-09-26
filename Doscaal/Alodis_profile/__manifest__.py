@@ -10,7 +10,9 @@
     'author': 'Doscaal',
     'website': 'http://www.doscaal.fr/',
     'depends': [
-        'base'
+        'base',
+        'website_sale',
+        'purchase',
     ],
     'images': [],
     'data': [

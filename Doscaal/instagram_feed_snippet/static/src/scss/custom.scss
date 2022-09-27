@@ -1,0 +1,1009 @@
+#instafeed {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+#instafeed .panel {
+    margin-bottom: 10px;
+}
+#instafeed .panel-heading {
+    padding: 5px 10px !important;
+}
+
+#instafeed .panel-heading .fa-heart {
+    color: #ED4956;
+    font-weight: bold;
+}
+
+#instafeed .panel-heading span.link {
+    float: right;
+    margin-top: 4px;
+}
+
+#instafeed .panel-body {
+    height: 100%;
+    width:100%;
+    padding: 0;
+}
+
+.user_profile {
+    display: -webkit-box;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    float: left;
+}
+.profile {
+    font-size: smaller;
+    padding-left: 10px;
+    padding-top: 4px;
+}
+
+#instafeed .panel-body img{
+    cursor: pointer;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    margin: 0 auto;
+    width: 100%;
+    height: 270px;
+    object-fit: cover;   
+}
+
+.panel_body_text {   
+    display: -webkit-box;
+    padding:10px;
+}
+
+.body_text {
+    height: 57px;
+    font-size: small;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    width: 100%;
+}
+.links {
+    position: absolute;
+    top: 40%;
+    left: 42%;
+    font-size: 40px;
+}
+.doc {
+    background: #504e4e;
+}
+.doc img:hover {
+    opacity: 0.5;
+}
+.links:hover{
+      opacity:1;
+    }
+.doc .links{
+    display: none;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    opacity: 0;
+    transition: .2s;
+}
+.links i.fa.fa-heart {
+    color: red;
+    font-size: 30px;
+}
+.doc{
+  &:hover{
+    &:before{
+      opacity:1;
+    }
+    .links{
+      opacity:1;
+    }
+  }
+}
+
+i.fa.fa-clone {
+    position: absolute;
+    top: 17%;
+    font-size: 20px;
+    left: 89%;
+    color: var(--600);
+}
+i.fa.fa-video-camera {
+    position: absolute;
+    top: 17%;
+    font-size: 20px;
+    left: 89%;
+}
+
+.panel-body.card {
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2),  0 -1px 0 rgba(0, 0, 0, 0.19);
+}
+
+div.load_more {
+    text-align: center;
+}
+
+div.load_more button {
+    border: 2px solid #000;
+    background: #fff;
+    color: #000;
+    letter-spacing: .05em;
+    min-width: 150px;
+    padding: 0;
+    line-height: 32px;
+}
+
+#masterModal .user {
+    display: block;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-bottom: 1px inset;
+}
+
+#masterModal .modal-header .fa-comments {
+    font-size: 18px;
+}
+
+#masterModal .modal-body {
+    padding: 0px;
+}
+
+@media (min-width: 576px){
+    #masterModal.modal-content {
+        height: 500px;
+        width: 100%;
+    }
+}
+@media (min-width: 576px){
+    #masterModal.modal-content {
+        width: 100%;
+        max-height: 0; 
+    }
+}
+
+#masterImg {
+    position: inherit;
+    height: 100%;
+    margin-left: 0px;
+    margin-right: -15px;
+}
+
+#masterImg img {
+    margin: auto;
+
+}
+#masterImg img:hover{
+     color: red;
+}
+
+#masterModal .modal-body .navigation {
+    float: left;
+    margin-top: 3px;
+}
+
+#masterModal .modal-body .navigation span i {
+    font-size: 40px;
+    color: #999;
+    cursor: pointer;
+}
+
+#masterModal .modal-body .navigation span i:hover {
+    color: #666666;
+}
+
+#masterModal .modal-body .navigation span i.fa-angle-left {
+    margin-right: 40px;
+}
+
+#masterModal .modal-body .close {
+    font-size: 50px;
+    font-weight: normal;
+}
+
+.share{
+    padding-top: 7px;
+    position: absolute;
+    bottom: 4px;
+    z-index: 10;
+    height: 40px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-top: 1px solid #d8d3c6;
+}
+#masterModal span.o_default_snippet_text {
+    padding-left: 12px;
+}
+
+span.likes_count {
+    font-weight: 700;
+}
+
+#masterModal .modal-body .user .img {
+    display: block;
+    float: left;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    margin: 5px 10px 5px 10px;
+}
+
+#masterModal .modal-body .user .names {
+    display: block;
+    margin-left: 0px;
+    margin-top: 5px;
+    // padding-right: 85px;
+}
+
+#masterModal .modal-body .likes .fa-heart,
+#masterModal .modal-body .likes .fa-comments {
+    color: #666666;
+    margin-right: 5px;
+}
+
+#masterModal .modal-body .share a {
+    border-radius: 100%;
+    border: 1px solid rgba(114, 114, 114, 0.42);
+    text-align: center;
+    font-size: 14px;
+    color: rgba(114, 114, 114, 0.42);
+    font-weight: normal;
+}
+
+#masterModal .modal-body .share a#fb_share {
+    padding: 2px 6px;
+}
+
+#masterModal .modal-body .share a#tw_share {
+    padding: 2px 4px;
+}
+
+#masterModal .modal-body .share a#in_share {
+    padding: 2px 5px;
+}
+
+#masterModal .modal-body .share a:hover {
+    color: #727272;
+    boder: 1px solid #727272;
+}
+
+#masterModal .modal-body .share span {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+#masterModal .modal-content {
+    box-shadow: none;
+    border: none;
+}
+h5#masterCaption {
+    overflow-y: scroll;
+}
+
+div#masterCaption { 
+    display: block;
+    display: -webkit-scrollbar;
+    overflow-y: scroll;
+    /* margin-left: 50px; */
+    margin-left: 15px;
+    width: 77%;
+    height: 450px;
+    overflow-x: hidden;
+    font-size: medium;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#masterCaption::-webkit-scrollbar {
+    display: none;
+}
+
+
+#masterModal .modal-dialog {
+    display: block;
+    flex-wrap: wrap;
+    text-align: left;
+    vertical-align: middle;
+}
+
+div#masterModal {
+    top: 46px;
+}
+
+@media (min-width: 991px) {
+    .insta_video {
+        height: 573px;
+    }
+    .ig_post {
+        display: inline-block;
+        float: left;
+        overflow: hidden;
+        padding: 5px;
+
+    }
+    .ig_post.x6 {
+        width: 16.66%;
+    }
+    .ig_post.x5 {
+        width: 20%;
+    }
+    .ig_post.x4 {
+        width: 25%;
+    }
+    .ig_post.x3 {
+        width: 33.33%;
+    }
+    .ig_post.x2 {
+        width: 50%;
+    }
+
+    #instafeed>div.ig_post {
+        display: none;
+    }
+
+    #instafeed>div.no_of_row_r1.ig_post.x6:nth-child(-n+6) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r1.ig_post.x5:nth-child(-n+5) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r1.ig_post.x4:nth-child(-n+4) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r1.ig_post.x3:nth-child(-n+3) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r1.ig_post.x2:nth-child(-n+2) {
+        display: block;
+    }
+
+    #instafeed>div.no_of_row_r2.ig_post.x6:nth-child(-n+12) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r2.ig_post.x5:nth-child(-n+10) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r2.ig_post.x4:nth-child(-n+8) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r2.ig_post.x3:nth-child(-n+6) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r2.ig_post.x2:nth-child(-n+4) {
+        display: block;
+    }
+
+    #instafeed>div.no_of_row_r3.ig_post.x6:nth-child(-n+18) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r3.ig_post.x5:nth-child(-n+15) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r3.ig_post.x4:nth-child(-n+12) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r3.ig_post.x3:nth-child(-n+9) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r3.ig_post.x2:nth-child(-n+6) {
+        display: block;
+    }
+
+    #instafeed>div.no_of_row_r4.ig_post.x6:nth-child(-n+24) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r4.ig_post.x5:nth-child(-n+20) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r4.ig_post.x4:nth-child(-n+16) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r4.ig_post.x3:nth-child(-n+12) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r4.ig_post.x2:nth-child(-n+8) {
+        display: block;
+    }
+
+    #instafeed>div.no_of_row_r5.ig_post.x6:nth-child(-n+30) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r5.ig_post.x5:nth-child(-n+25) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r5.ig_post.x4:nth-child(-n+20) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r5.ig_post.x3:nth-child(-n+15) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r5.ig_post.x2:nth-child(-n+10) {
+        display: block;
+    }
+
+    #instafeed>div.no_of_row_r6.ig_post.x6:nth-child(-n+36) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r6.ig_post.x5:nth-child(-n+30) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r6.ig_post.x4:nth-child(-n+24) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r6.ig_post.x3:nth-child(-n+18) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r6.ig_post.x2:nth-child(-n+12) {
+        display: block;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .ig_post.x6 {
+        width: 100%;
+    }
+    .ig_post.x5 {
+        width: 100%;
+    }
+    .ig_post.x4 {
+        width: 100%;
+    }
+    .ig_post.x3 {
+        width: 100%;
+    }
+    .ig_post.x2 {
+        width: 100%;
+    }
+
+    #instafeed>div.ig_post {
+        display: none;
+    }
+
+    #instafeed>div.no_of_row_r1.ig_post.x6:nth-child(-n+1) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r1.ig_post.x5:nth-child(-n+1) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r1.ig_post.x4:nth-child(-n+1) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r1.ig_post.x3:nth-child(-n+1) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r1.ig_post.x2:nth-child(-n+1) {
+        display: block;
+    }
+
+    #instafeed>div.no_of_row_r2.ig_post.x6:nth-child(-n+2) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r2.ig_post.x5:nth-child(-n+2) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r2.ig_post.x4:nth-child(-n+2) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r2.ig_post.x3:nth-child(-n+2) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r2.ig_post.x2:nth-child(-n+2) {
+        display: block;
+    }
+
+    #instafeed>div.no_of_row_r3.ig_post.x6:nth-child(-n+3) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r3.ig_post.x5:nth-child(-n+3) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r3.ig_post.x4:nth-child(-n+3) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r3.ig_post.x3:nth-child(-n+3) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r3.ig_post.x2:nth-child(-n+3) {
+        display: block;
+    }
+
+    #instafeed>div.no_of_row_r4.ig_post.x6:nth-child(-n+4) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r4.ig_post.x5:nth-child(-n+4) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r4.ig_post.x4:nth-child(-n+4) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r4.ig_post.x3:nth-child(-n+4) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r4.ig_post.x2:nth-child(-n+4) {
+        display: block;
+    }
+
+    #instafeed>div.no_of_row_r5.ig_post.x6:nth-child(-n+5) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r5.ig_post.x5:nth-child(-n+5) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r5.ig_post.x4:nth-child(-n+5) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r5.ig_post.x3:nth-child(-n+5) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r5.ig_post.x2:nth-child(-n+5) {
+        display: block;
+    }
+
+    #instafeed>div.no_of_row_r6.ig_post.x6:nth-child(-n+6) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r6.ig_post.x5:nth-child(-n+6) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r6.ig_post.x4:nth-child(-n+6) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r6.ig_post.x3:nth-child(-n+6) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r6.ig_post.x2:nth-child(-n+6) {
+        display: block;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767px) {
+    .ig_post {
+        overflow: hidden;
+        padding: 5px;
+    }
+
+    .ig_post.x6 {
+        width: 50%;
+    }
+    .ig_post.x5 {
+        width: 50%;
+    }
+    .ig_post.x4 {
+        width: 50%;
+    }
+    .ig_post.x3 {
+        width: 50%;
+    }
+    .ig_post.x2 {
+        width: 50%;
+    }
+
+    #instafeed>div.ig_post {
+        display: none;
+    }
+
+    #instafeed>div.no_of_row_r1.ig_post.x6:nth-child(-n+2) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r1.ig_post.x5:nth-child(-n+2) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r1.ig_post.x4:nth-child(-n+2) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r1.ig_post.x3:nth-child(-n+2) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r1.ig_post.x2:nth-child(-n+2) {
+        display: block;
+    }
+
+    #instafeed>div.no_of_row_r2.ig_post.x6:nth-child(-n+4) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r2.ig_post.x5:nth-child(-n+4) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r2.ig_post.x4:nth-child(-n+4) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r2.ig_post.x3:nth-child(-n+4) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r2.ig_post.x2:nth-child(-n+4) {
+        display: block;
+    }
+
+    #instafeed>div.no_of_row_r3.ig_post.x6:nth-child(-n+6) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r3.ig_post.x5:nth-child(-n+6) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r3.ig_post.x4:nth-child(-n+6) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r3.ig_post.x3:nth-child(-n+6) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r3.ig_post.x2:nth-child(-n+6) {
+        display: block;
+    }
+
+    #instafeed>div.no_of_row_r4.ig_post.x6:nth-child(-n+8) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r4.ig_post.x5:nth-child(-n+8) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r4.ig_post.x4:nth-child(-n+8) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r4.ig_post.x3:nth-child(-n+8) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r4.ig_post.x2:nth-child(-n+8) {
+        display: block;
+    }
+
+    #instafeed>div.no_of_row_r5.ig_post.x6:nth-child(-n+10) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r5.ig_post.x5:nth-child(-n+10) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r5.ig_post.x4:nth-child(-n+10) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r5.ig_post.x3:nth-child(-n+10) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r5.ig_post.x2:nth-child(-n+10) {
+        display: block;
+    }
+
+    #instafeed>div.no_of_row_r6.ig_post.x6:nth-child(-n+12) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r6.ig_post.x5:nth-child(-n+12) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r6.ig_post.x4:nth-child(-n+12) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r6.ig_post.x3:nth-child(-n+12) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r6.ig_post.x2:nth-child(-n+12) {
+        display: block;
+    }
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 990px) {
+    div#masterCaption { 
+        height: 282px;
+        margin-bottom: 30px;
+    }
+    #masterModal .modal-body .user .names {
+        padding-right: 1px;
+    }
+    .close_btn {
+        right: -32px !important;
+        top: -32px !important;
+    }
+    .ig_post {
+        overflow: hidden;
+        padding: 5px;
+    }
+    .ig_post.x4 {
+        width: 33.33%;
+    }
+    .ig_post.x6 {
+        width: 33.33%;
+    }
+    .ig_post.x5 {
+        width: 33.33%;
+    }
+    .ig_post.x4 {
+        width: 33.33%;
+    }
+    .ig_post.x3 {
+        width: 33.33%;
+    }
+    .ig_post.x2 {
+        width: 33.33%;
+    }
+
+    #instafeed>div.ig_post {
+        display: none;
+    }
+
+    #instafeed>div.no_of_row_r1.ig_post.x6:nth-child(-n+3) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r1.ig_post.x5:nth-child(-n+3) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r1.ig_post.x4:nth-child(-n+3) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r1.ig_post.x3:nth-child(-n+3) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r1.ig_post.x2:nth-child(-n+3) {
+        display: block;
+    }
+
+    #instafeed>div.no_of_row_r2.ig_post.x6:nth-child(-n+6) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r2.ig_post.x5:nth-child(-n+6) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r2.ig_post.x4:nth-child(-n+6) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r2.ig_post.x3:nth-child(-n+6) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r2.ig_post.x2:nth-child(-n+6) {
+        display: block;
+    }
+
+    #instafeed>div.no_of_row_r3.ig_post.x6:nth-child(-n+9) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r3.ig_post.x5:nth-child(-n+9) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r3.ig_post.x4:nth-child(-n+9) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r3.ig_post.x3:nth-child(-n+9) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r3.ig_post.x2:nth-child(-n+9) {
+        display: block;
+    }
+
+    #instafeed>div.no_of_row_r4.ig_post.x6:nth-child(-n+12) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r4.ig_post.x5:nth-child(-n+12) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r4.ig_post.x4:nth-child(-n+12) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r4.ig_post.x3:nth-child(-n+12) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r4.ig_post.x2:nth-child(-n+12) {
+        display: block;
+    }
+
+    #instafeed>div.no_of_row_r5.ig_post.x6:nth-child(-n+15) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r5.ig_post.x5:nth-child(-n+15) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r5.ig_post.x4:nth-child(-n+15) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r5.ig_post.x3:nth-child(-n+15) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r5.ig_post.x2:nth-child(-n+15) {
+        display: block;
+    }
+
+    #instafeed>div.no_of_row_r6.ig_post.x6:nth-child(-n+18) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r6.ig_post.x5:nth-child(-n+18) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r6.ig_post.x4:nth-child(-n+18) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r6.ig_post.x3:nth-child(-n+18) {
+        display: block;
+    }
+    #instafeed>div.no_of_row_r6.ig_post.x2:nth-child(-n+18) {
+        display: block;
+    }
+
+}
+
+#instafeed img.rounded-circle{
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    border: 1px solid rgba(114, 114, 114, 0.42);
+    text-align: center;
+    font-size: 14px;
+    color: rgba(114, 114, 114, 0.42);
+    font-weight: normal;
+    object-fit: contain;
+}
+.close_btn {
+    position: absolute;
+    right: -55px;
+    top: -20px;
+}
+@media only screen and (max-width: 768px) {
+    // .ig_post.x6 {
+    //     width: 100%;
+    // }
+    // .ig_post.x5 {
+    //     width: 100%;
+    // }
+    // .ig_post.x4 {
+    //     width: 100%;
+    // }
+    // .ig_post.x3 {
+    //     width: 100%;
+    // }
+    // .ig_post.x2 {
+    //     width: 100%;
+    // }
+    #masterImg {
+        height: 100% !important;
+    }
+    .close_btn {
+        right: -30px !important;
+        top: -40px !important;
+    }
+    /* kn code */
+    .insta_popup_footer {
+        bottom: 40px !important;
+        left: 14px !important;
+    }
+
+    .close_btn {
+        right: 10px !important;
+        top: -4px !important;
+        z-index: 20000;
+    }
+    .close_btn .close {
+        text-shadow: 2px 2px 20px black;
+    }
+}
+@media (min-width: 576px){
+    .modal-body {
+        overflow: auto;
+        min-height: 0;
+    }
+    .modal-content {
+        max-height: inherit;
+    }
+}
+
+.close_btn {
+    position: absolute;
+    right: -105px;
+    top: -20px;
+    .close {
+        color: white !important;
+        font-size: 3rem !important;
+        opacity: unset !important;
+    }
+    .close:focus-visible,
+    .close:focus {
+        outline: unset !important;
+    }
+}
+.close_btn:focus-visible,
+.close_btn:focus {
+    outline: unset !important;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 50px;
+    background-color: #7f7f7f;
+    height: 36px !important;
+}
+.carousel-control-prev .fa-chevron-circle-left,
+.carousel-control-next .fa-chevron-circle-right {
+    text-shadow: 2px 2px 20px black;
+}
+
+/* kn code */
+
+.insta_popup_footer {
+    z-index: 10;
+    position: absolute;
+    height: 40px;
+    bottom: 0px;
+    right: 14px;
+    left: 0;
+    background: white;
+}
+
+.footer_buttons span {
+    display: inline-block;
+    padding: 8px 10px 8px 10px;
+}
+
+.footer_social_media span {
+    display: inline-block;
+    padding: 10px 10px 10px 10px;
+}
+
+.insta_popup_footer span.insta_save {
+    float: right;
+}
+
+.insta_popup_footer .footer_social_media span {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.insta_popup_footer .footer_social_media span a {
+    border-radius: 100%;
+    border: 1px solid rgba(114, 114, 114, 0.42);
+    text-align: center;
+    font-size: 14px;
+    color: rgba(114, 114, 114, 0.42);
+    font-weight: normal;
+    padding: 3.4px 6.5px;
+}
+
+.insta_popup_footer .insta_save i.fa.fa-instagram {
+    font-size: 25px;
+}
+
+.insta_popup_footer .footer_buttons {
+    border-top: 1px solid #e4dfd1;
+}
+
+.insta_popup_footer .footer_social_media {
+    border-top: 1px solid #e4dfd1;
+}
+
+#UserImage img.img-responsive {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 1px solid rgba(114, 114, 114, 0.42);
+    text-align: center;
+    font-size: 14px;
+    color: rgba(114, 114, 114, 0.42);
+    font-weight: normal;
+    object-fit: contain;
+}
+
+#instafeed.owl-carousel .owl-nav {
+    button.owl-prev {
+        position: absolute;
+        left: 10px;
+        top: 36%;
+        font-size: 46px;
+        width: 28px;
+        background: white;
+        color: gray;
+        border-left: 0px solid;
+        outline: none;
+    }
+    button.owl-next {
+        position: absolute;
+        right: 10px;
+        top: 36%;
+        font-size: 46px;
+        width: 28px;
+        background: white;
+        color: gray;
+        height: 75px;
+        border-right: 0px solid;
+        outline: none;
+    }
+}

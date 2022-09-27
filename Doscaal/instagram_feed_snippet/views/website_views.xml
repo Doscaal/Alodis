@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_website_form_knk" model="ir.ui.view">
+        <field name="name">Website form view - knk</field>
+        <field name="model">website</field>
+        <field name="inherit_id" ref="website.view_website_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Instagram Configuration" name="instagram_config">
+                    <group>
+                        <group>
+                            <field name="user_picture" widget="image" class="oe_avatar float-left"/>
+                            <field name="instagram_app_id" style="max-width: 300px" />
+                            <field name="instagram_app_secret" password="True" style="max-width: 300px" />
+                            <field name="instagram_access_token" style="max-width: 300px" />
+                            <field name="instagram_token_expire_date" attrs="{'invisible': [('instagram_access_token', '=', False), ('instagram_token_state', '!=', 'error')]}" />
+                            <field name="instagram_token_state" invisible="1" />
+                        </group>
+                        <group string="Design Configuration" attrs="{'invisible': [('instagram_access_token', '=', False), ('instagram_token_state', '!=', 'valid')]}">
+                            <field name="instagram_feed_design" />
+                            <field name="slider_speed" attrs="{'invisible': [('instagram_feed_design', '=', 'grid')]}"/>
+                            <field name="instagram_number_of_row" attrs="{'invisible': [('instagram_feed_design', '=', 'slider')]}"/>
+                            <field name="instagram_row"/>
+                        </group>
+                    </group>
+                    <div class="row" attrs="{'invisible': [('instagram_token_state', '!=', 'error')]}">
+                        <label for="instagram_error_message" string="Error Message" class="col-md-5 o_light_label" />
+                        <field name="instagram_error_message" />
+                        <div class="alert alert-warning" role="alert">
+                            Your token is having some error as above! Please re-authorize and get access token.
+                        </div>
+                    </div>
+                    <div class="row" attrs="{'invisible': [('instagram_token_state', '!=', 'expired')]}">
+                        <div class="alert alert-warning" role="alert">
+                            Your token has been expired! Please re-authorize and get access token.
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button type="object" name="authorize_instagram_for_token" string="Authorize &amp; Get Token" class="oe_highlight ml16" />
+                    </div>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

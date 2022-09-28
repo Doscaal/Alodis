@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+</head>
+<!-- titulo -->
+<section class="container mt-5">
+    <h1 class="text-center" class="text-center" style="font-size:35px; color:#875A7B; font-weight:700; text-transform:uppercase; text-align:left; margin:0; margin-bottom:16px">Ocultar el transportista de entrega</h1>
+    <h2 class="text-center" style="color:#875A7B; font-size:30px; margin-bottom:30px; font-family:'Cabin', sans-serif; font-weight:400; line-height:1.2">Hide delivery carrier</h2>  
+     <!-- video -->
+    <p class="text-center">
+        Video Youtube
+    </p>
+    <div class="oe_demo oe_picture oe_screenshot">
+        <a href="https://youtu.be/hAewUA6lgBw" target="_blank">
+            <img src="miniatura_video.jpg" alt="hide delivery carrier video">
+        </a>
+    </div>
+</section>
+
+<!-- vision general -->
+<section style="margin-top:10%;">
+    <h2 class="text-center" style="color:#875A7B; font-size:25px; margin-bottom:30px; font-family:'Cabin', sans-serif; font-weight:400; line-height:1.2">
+        Vision General
+    </h2>
+        <p class="text-center">
+            Esta aplicacion permitira ocultar al transportista de la lista de metodos de envio, ya sea directamente en la venta o desde el modulo ecommerce o comercio electronico. El metodo de envio se oculta de acuerdo a la condicion del cliente, en este caso si se trata de un cliente B2B o un cliente B2C.
+        </p>
+</section>
+<!-- ocultar metodo de envio -->
+<section class="container mt-5">
+    <h2 class="text-center" style="color:#875A7B; font-size:25px; margin-bottom:30px; font-family:'Cabin', sans-serif; font-weight:400; line-height:1.2">Ocultar metodo de envio a clientes B2B o B2C</h2>
+</section>
+<!-- condicion previa -->
+<section class="container mt-5">
+    <h2 class="text-center" style="color:#875A7B; font-size:25px; margin-bottom:30px; font-family:'Cabin', sans-serif; font-weight:400; line-height:1.2">Condicion previa</h2>
+    <p class="text-center">
+        La aplicacion nos mostrara un nuevo campo de seleccion en el cliente que nos permitira clasificarlo como un cliente como cliente B2B o cliente B2C. Lo primero que se necesita es realizar esta clasificacion a los clientes. Dependiendo de esta clasificacion es que el metodo de pago se mostrara o no en la venta.<br> 
+    </p>
+    <div class="oe_demo oe_screenshot" style="max-height: initial;">
+        <img src="seleccion_b2b_o_b2c_cliente.jpg" alt="seleccion b2b en cliente odoo, seleccion b2c en cliente odoo, seleccionar tipo de cliente" class="img-fluid"/>
+    </div>
+    <h2 class="text-center" style="color:#875A7B; font-size:25px; margin-bottom:30px; font-family:'Cabin', sans-serif; font-weight:400; line-height:1.2">Configuracion de metodo de entrega b2b</h2>
+    <p class="text-center">
+        Creamos nuestro metodo de entrega en el menu <i>Ventas/Configuracion/Ordenes de venta/Metodos de envio</i>. Para que este metodo de envio sea visible unicamente a clientes B2B, se debera seleccionar B2B en el campo <i>Aplica para cliente</i>. En caso que se requiera que el metodo de envio se muestre tanto para clientes b2b como para clientes b2c, se debera dejar vacio el campo.
+        <br> 
+    </p>
+    <div class="oe_demo oe_screenshot">
+        <img src="metodo_entrega_b2b.jpg" alt="metodo de entrega b2b odoo, metodo de envio b2b odoo" class="img-fluid"/>
+    </div>
+    <h2 class="text-center" style="color:#875A7B; font-size:25px; margin-bottom:30px; font-family:'Cabin', sans-serif; font-weight:400; line-height:1.2">Configuracion de metodo de entrega b2c</h2>
+    <p class="text-center">
+        Creamos nuestro metodo de entrega en el menu <i>Ventas/Configuracion/Ordenes de venta/Metodos de envio</i>. Para que este metodo de envio sea visible unicamente a clientes B2C, se debera seleccionar B2C en el campo <i>Aplica para cliente</i>. En caso que se requiera que el metodo de envio se muestre tanto para clientes b2b como para clientes b2c, se debera dejar vacio el campo.
+        <br> 
+    </p>
+    <div class="oe_demo oe_screenshot" style="max-height: initial;">
+        <img src="metodo_entrega_b2c.jpg" alt="metodo de entrega b2c odoo, metodo de envio b2c odoo" class="img-fluid"/>
+    </div>
+</section>
+<section class="container mt-5">
+    <h2 class="text-center" style="color:#875A7B; font-size:25px; margin-bottom:30px; font-family:'Cabin', sans-serif; font-weight:400; line-height:1.2">Modo de uso en modulo de venta</h2>
+    <p class="text-center">
+        Una vez configurado el cliente y el metodo de pago podremos abrir la orden de venta y oprimir el boton <i>Agregar un envio</i> se nos mostrara una pantalla donde podremos seleccionar los transportistas configurados. Se filtrara los proveedores de envio segun la siguiente condicion:<br>
+        <ol>
+            <li>Si el cliente en la venta B2B unicamente se le mostrara metodos de envio configurado como B2B o que no tengan configurado este campo.</li>
+            <li>Si el cliente en la venta B2C unicamente se le mostrara metodos de envio configurado como B2C o que no tengan configurado este campo.</li>
+        </ol>
+    </p>
+    
+    <div class="oe_demo oe_screenshot">
+        <img src="b2b_ventas.jpg" alt="filtro metodo de envio odoo, envio odoo b2b, envio odoo b2c, ocultar metodo de envio odoo" class="img-fluid"/>
+    </div>
+    <div>
+        <p class="text-center">
+            Este filtro o ocultamiento de metodos de envio tambien se veran reflejados desde el Ecommerce o Comercio electronico. Cuando el cliente en el portal llegue a la seccion de proveedores de envio vera unicamente los que tenga configurados. Bajo la condicion de que el como cliente debe tener una clasificacion b2b o b2c.
+        </p>
+    </div>
+    <div class="oe_demo oe_screenshot">
+        <img src="b2c_ecommerce.jpg" alt="filtro metodo de envio odoo, envio odoo b2b, envio odoo b2c, ocultar metodo de envio odoo" class="img-fluid"/>
+    </div>
+</section>
+
+<section class="oe_container" style="padding: 0% 0% 6% 0%;">
+    <center>
+        <div class="col-md-12" style="margin: auto !important;
+         width: 70%;
+         padding: 30px;">
+            <h2 style="font-weight: 600;text-align: center;width: 100%;">Necesita ayuda?</h2>
+            <hr style="margin-top: 0px;margin-bottom: 2%;border: 0;text-align: center;border-top: 3px solid #d21c22;width: 5%;">
+            <h4 style="font-size:16px;"> Si tiene algo que compartirnos con respecto a este modulo, por favor permitenos saber. Estamos listos para ofrecerte nuestro apoyo. </h4>
+            <div class="col-md-6" style="float:left; padding:20px;">
+                <h4><i class="fa fa-envelope"></i>Envianos un correo electronico </h4>
+                <p>contacto@tohsoluciones.com</p>
+            </div>
+            <div class="col-md-6" style="float:left; padding:20px;">
+                <h4><i class="fa fa-globe"></i> Visitanos en </h4>
+                <a href="https://www.tohsoluciones.com/" target="_blank"> www.tohsoluciones.com</a>
+            </div>
+        </div>
+    </center>
+</section>
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_picture" style="max-height: initial;">
+			<p><br/></p>
+            <h2 class="oe_slogan" class="text-center" style="font-size:35px; color:#875A7B; font-weight:700; text-transform:uppercase; text-align:left; margin:0; margin-bottom:16px">
+                <img src="https://tohsoluciones.com/wp-content/uploads/2020/05/96034034_260553645262362_8263055454419025920_n-e1588631562850.png"> TOH SOLUCIONES DIGITALES
+            </h2>
+            <p class="text-center">
+                En Toh Soluciones Digitales tenemos una amplia experiencia en la implementacion de aplicaciones basadas en Odoo. 
+				Somos expertos implementando Odoo y por ello podemos ofrecerle la solucion que mejor se adapte a sus necesidades. 
+				Le ayudamos a tener un control completo de los procesos de administracion, ventas, compras, inventarios y mas. 
+				Analizamos la version de Odoo adecuada a sus procesos de negocio con tropicalizacion latinoamericana y Mexicana.
+            </p>
+            <div class="oe_slogan" style="margin: 10px 0 0 0;">
+                <a class="btn btn-lg mt8 oe_purple" href="https://tohsoluciones.com/contacto/">
+                    <i class="fa fa-phone" style="margin-right: 6px;"></i>Contactanos</a>
+            </div>
+        </div>
+    </div>
+</section>

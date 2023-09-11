@@ -4,7 +4,7 @@
 
 {
     'name': 'Alodis Profile',
-    'version': '14.0.1.0',
+    'version': '14.0.1.1',
     'category': 'Custom',
     'description': """Profile for Alodis""",
     'author': 'Doscaal',

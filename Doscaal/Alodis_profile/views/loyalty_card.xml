@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="loyalty_card_view_tree" model="ir.ui.view">
+        <field name="name">loyalty_card.tree.inherit.sale</field>
+        <field name="model">loyalty.card</field>
+        <field name="inherit_id" ref="loyalty.loyalty_card_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='program_id']" position="after">
+                <field name="amount_total"/>
+                <field name="amount_untaxed"/>
+                <field name="state_order"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -8,5 +8,4 @@ class LoyaltyCard(models.Model):
 
     amount_total = fields.Monetary(related="order_id.amount_total")
     amount_untaxed = fields.Monetary(related="order_id.amount_untaxed")
-    amount_untaxed = fields.Monetary(related="order_id.amount_untaxed")
     state_order = fields.Selection(related="order_id.state")

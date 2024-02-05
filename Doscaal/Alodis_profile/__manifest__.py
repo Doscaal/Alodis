@@ -11,7 +11,7 @@
     'website': 'http://www.doscaal.fr/',
     'depends': [
         'base',
-        'loyalty',
+        'sale_loyalty',
     ],
     'images': [],
     'data': [

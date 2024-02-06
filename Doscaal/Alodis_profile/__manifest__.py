@@ -4,7 +4,7 @@
 
 {
     'name': 'Alodis Profile',
-    'version': '14.0.1.1',
+    'version': '16.0.1.0',
     'category': 'Custom',
     'description': """Profile for Alodis""",
     'author': 'Doscaal',
@@ -13,9 +13,12 @@
         'base',
         'website_sale',
         'purchase',
+        'sale_loyalty',
+        'sale_management',
     ],
     'images': [],
     'data': [
+        'views/loyalty_card.xml',
     ],
     'qweb': [],
     'test': [],

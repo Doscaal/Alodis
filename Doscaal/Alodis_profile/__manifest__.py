@@ -12,6 +12,7 @@
     'depends': [
         'base',
         'sale_loyalty',
+        'sale_management',
     ],
     'images': [],
     'data': [

@@ -10,7 +10,5 @@ class SaleOrder(models.Model):
     def __try_apply_program(self, program, coupon, status):
         res = super(SaleOrder, self).__try_apply_program(
             program, coupon, status)
-        print(program)
-        print(coupon)
-        print(status)
+        coupon.write({'order_id': self.id})
         return res

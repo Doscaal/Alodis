@@ -17,16 +17,16 @@ class LoyaltyCard(models.Model):
     def compute_ttc(self):
         for rec in self:
             rec.amount_total = rec.order_id.state in (
-                'sale', 'done') and rec.amount_total or 0
+                'sale', 'done') and rec.order_id.amount_total or 0
 
     @api.depends('order_id')
     def compute_ht(self):
         for rec in self:
             rec.amount_untaxed = rec.order_id.state in (
-                'sale', 'done') and rec.amount_untaxed or 0
+                'sale', 'done') and rec.order_id.amount_untaxed or 0
 
     @api.depends('order_id')
     def compute_date(self):
         for rec in self:
             rec.date_order = rec.order_id.state in (
-                'sale', 'done') and rec.date_order or False
+                'sale', 'done') and rec.order_id.date_order or False

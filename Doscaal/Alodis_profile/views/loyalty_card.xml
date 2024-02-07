@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
+    <record id="loyalty_card_view_search" model="ir.ui.view">
+        <field name="name">loyalty_card.search.inherit.sale</field>
+        <field name="model">loyalty.card</field>
+        <field name="inherit_id" ref="loyalty.loyalty_card_view_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='active']" position="after">
+                <filter name="used" string="Cde confirme" domain="[('order_id.state', 'in', ('sale', 'done'))]"/>
+            </xpath>
+        </field>
+    </record>
 
     <record id="loyalty_card_view_tree" model="ir.ui.view">
         <field name="name">loyalty_card.tree.inherit.sale</field>

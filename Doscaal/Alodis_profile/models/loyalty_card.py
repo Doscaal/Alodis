@@ -10,8 +10,11 @@ class LoyaltyCard(models.Model):
     amount_untaxed = fields.Monetary(string="Total HT", compute="compute_ht")
     state_order = fields.Selection(related="order_id.state")
     date_order = fields.Datetime(string="Date de commande",
-                                 compute="compute_date")
+                                 compute="compute_date", search="search_date")
     currency_id = fields.Many2one(related="order_id.currency_id")
+
+    def search_date(self, operator, value):
+        return [('order_id.date_order', operator, value)]
 
     @api.depends('order_id')
     def compute_ttc(self):

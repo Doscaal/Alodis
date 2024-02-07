@@ -7,6 +7,8 @@
         <field name="inherit_id" ref="loyalty.loyalty_card_view_tree"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='program_id']" position="after">
+                <field name="date_order"/>
+                <field name="currency_id" invisible="1"/>
                 <field name="amount_total"/>
                 <field name="amount_untaxed"/>
                 <field name="state_order"/>

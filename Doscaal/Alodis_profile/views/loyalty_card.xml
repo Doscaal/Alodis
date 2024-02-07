@@ -9,8 +9,8 @@
             <xpath expr="//field[@name='program_id']" position="after">
                 <field name="date_order"/>
                 <field name="currency_id" invisible="1"/>
-                <field name="amount_total"/>
-                <field name="amount_untaxed"/>
+                <field name="amount_total" sum='Total'/>
+                <field name="amount_untaxed" sum='Total'/>
                 <field name="state_order"/>
             </xpath>
         </field>

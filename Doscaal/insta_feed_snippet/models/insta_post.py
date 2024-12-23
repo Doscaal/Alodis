@@ -6,6 +6,7 @@ from odoo.exceptions import UserError
 
 class InstaPost(models.Model):
     _name = 'insta.post'
+    _descdription = "post intagram"
 
     name = fields.Char(string="Media ID")
     caption = fields.Char("Caption")

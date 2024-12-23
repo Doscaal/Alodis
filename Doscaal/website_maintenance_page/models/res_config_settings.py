@@ -40,7 +40,7 @@ class ResConfigSettings(models.TransientModel):
                                      readonly=False,
                                      help="Add Maintenance header to show "
                                           "on the website")
-    maintenance_hdr_color = fields.Char(string="Header Color",
+    maintenance_hdr_color = fields.Char(string="Couleur entête",
                                         related="website_id."
                                                 "maintenance_hdr_color",
                                         readonly=False,

@@ -11,10 +11,17 @@ class LoyaltyCard(models.Model):
     state_order = fields.Selection(related="order_id.state")
     date_order = fields.Datetime(string="Date de commande",
                                  compute="compute_date", search="search_date")
-    currency_id = fields.Many2one(related="order_id.currency_id")
+    currency_id = fields.Many2one(string="Devise", compute="compute_currency")
+    cashback = fields.Float(string='% reversion')
 
     def search_date(self, operator, value):
         return [('order_id.date_order', operator, value)]
+
+    @api.depends('order_id')
+    def compute_currency(self):
+        for rec in self:
+            rec.currency = rec.order_id.state in (
+                'sale', 'done') and rec.order_id.currency_id or False
 
     @api.depends('order_id')
     def compute_ttc(self):

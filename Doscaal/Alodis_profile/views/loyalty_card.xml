@@ -25,4 +25,15 @@
             </xpath>
         </field>
     </record>
+
+    <record id="loyalty_card_view_form" model="ir.ui.view">
+        <field name="name">loyalty_card.tree.inherit.sale</field>
+        <field name="model">loyalty.card</field>
+        <field name="inherit_id" ref="loyalty.loyalty_card_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="cashback" widget="sol_discount"/>
+            </xpath>
+        </field>
+    </record>
 </odoo>

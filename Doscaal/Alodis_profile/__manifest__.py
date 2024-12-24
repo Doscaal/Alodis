@@ -19,6 +19,7 @@
     'images': [],
     'data': [
         'views/loyalty_card.xml',
+        'views/loyalty_program.xml',
     ],
     'qweb': [],
     'test': [],

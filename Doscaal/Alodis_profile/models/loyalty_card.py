@@ -12,8 +12,6 @@ class LoyaltyCard(models.Model):
     date_order = fields.Datetime(string="Date de commande",
                                  compute="compute_date", search="search_date")
     currency_id = fields.Many2one(string="Devise", compute="compute_currency")
-    influencer_id = fields.Many2one(comodel_name='loyalty.card',
-                                    string='Wallet influencer')
     cashback = fields.Float(string='% reversion')
 
     def search_date(self, operator, value):

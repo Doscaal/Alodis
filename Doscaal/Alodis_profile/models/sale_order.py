@@ -17,7 +17,7 @@ class SaleOrder(models.Model):
                 if len(wallet) == 1:
                     gain = rec.amount_untaxed * wallet.cashback
                 wallet.write({
-                    'balance': wallet.balance + gain
+                    'points': wallet.points + gain
                 })
         return res
 

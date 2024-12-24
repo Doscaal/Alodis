@@ -11,7 +11,7 @@ class SaleOrder(models.Model):
         res = super(SaleOrder, self).action_confirm()
         if res:
             for rec in self:
-                wallet = rec.order_lines.mapped('coupon_id').filtered(
+                wallet = rec.order_line.mapped('coupon_id').filtered(
                     lambda lc: lc.loyalty_program_id.influencer_id
                 ).loyalty_program_id.influencer_id
                 if len(wallet) == 1:

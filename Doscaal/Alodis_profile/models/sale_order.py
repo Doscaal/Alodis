@@ -15,7 +15,7 @@ class SaleOrder(models.Model):
                     lambda lc: lc.program_id.influencer_id
                 ).program_id.influencer_id
                 if len(wallet) == 1:
-                    gain = rec.amount_untaxed * wallet.cashback
+                    gain = rec.amount_untaxed * wallet.cashback / 100
                     wallet.write({
                         'points': wallet.points + gain
                     })

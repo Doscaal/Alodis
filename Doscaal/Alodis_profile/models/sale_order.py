@@ -16,9 +16,9 @@ class SaleOrder(models.Model):
                 ).program_id.influencer_id
                 if len(wallet) == 1:
                     gain = rec.amount_untaxed * wallet.cashback
-                wallet.write({
-                    'points': wallet.points + gain
-                })
+                    wallet.write({
+                        'points': wallet.points + gain
+                    })
         return res
 
     def __try_apply_program(self, program, coupon, status):

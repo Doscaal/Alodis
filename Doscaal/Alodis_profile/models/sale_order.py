@@ -12,8 +12,8 @@ class SaleOrder(models.Model):
         if res:
             for rec in self:
                 wallet = rec.order_line.mapped('coupon_id').filtered(
-                    lambda lc: lc.loyalty_program_id.influencer_id
-                ).loyalty_program_id.influencer_id
+                    lambda lc: lc.program_id.influencer_id
+                ).program_id.influencer_id
                 if len(wallet) == 1:
                     gain = rec.amount_untaxed * wallet.cashback
                 wallet.write({
